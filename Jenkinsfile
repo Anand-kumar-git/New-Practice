@@ -22,7 +22,7 @@ pipeline {
                     sh "docker build -t ${IMAGE_NAME} ."
                 }
             }
-        }
+        
         stage('Login to DockerHub') {
             steps {
                 script {
