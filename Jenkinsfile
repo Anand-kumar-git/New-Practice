@@ -18,10 +18,11 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                script 
+                script {
                     sh "docker build -t ${IMAGE_NAME} ."
                 }
             }
+        }
         
         stage('Login to DockerHub') {
             steps {
