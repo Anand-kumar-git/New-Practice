@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "anand20003/jenkins:latest"
+        IMAGE_NAME = "anand20003/jenkins:V1"
     }
 
     stages {
@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                script {
+                script 
                     sh "docker build -t ${IMAGE_NAME} ."
                 }
             }
